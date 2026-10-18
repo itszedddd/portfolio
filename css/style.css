@@ -1335,24 +1335,7 @@ body:hover .cursor-glow { opacity: 1; }
   color: var(--text-primary);
 }
 
-.hud-space {
-  background: radial-gradient(circle at 50% 50%, #15102a 0%, #080c14 100%);
-  position: relative;
-}
 
-.stars-cluster {
-  position: relative;
-  height: 60px;
-}
-
-.star-node {
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  background: #00ffff;
-  border-radius: 50%;
-  box-shadow: 0 0 10px #00ffff;
-}
 
 .terminal-preview-lines {
   display: flex;
