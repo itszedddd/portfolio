@@ -187,16 +187,28 @@
 (function initReveal() {
   const reveals = document.querySelectorAll('[data-reveal]');
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('revealed');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+  // Immediately reveal elements near or in the viewport
+  reveals.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight + 150) {
+      el.classList.add('revealed');
+    }
+  });
 
-  reveals.forEach(el => observer.observe(el));
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.01, rootMargin: '100px 0px 50px 0px' });
+
+    reveals.forEach(el => observer.observe(el));
+  } else {
+    reveals.forEach(el => el.classList.add('revealed'));
+  }
 })();
 
 // ── Project Filters ──
