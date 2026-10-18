@@ -57,7 +57,7 @@
   });
 })();
 
-// ── Navbar Scroll ──
+// ── Navbar Scroll & Mobile Toggle ──
 (function initNavbar() {
   const navbar = document.getElementById('navbar');
   const toggle = document.getElementById('menuToggle');
@@ -98,17 +98,17 @@
   setTimeout(type, 800);
 })();
 
-// ── Role Typing ──
+// ── Role Typing Effect ──
 (function initRoleTyping() {
   const el = document.getElementById('typingRole');
   if (!el) return;
 
   const roles = [
     'Full-Stack Software Engineer',
-    'React & Next.js Developer',
-    'FastAPI Backend Architect',
-    'ML & Computer Vision Integrator',
-    'Cryptography Enthusiast',
+    'React 19 & Next.js Architect',
+    'FastAPI & Python Backend Specialist',
+    'Applied ML & Tesseract OCR Integrator',
+    'AES-256 Cryptography Engineer',
     'Dean\'s Lister — GPA 1.4'
   ];
 
@@ -151,7 +151,12 @@
 
   function animateCounters() {
     counters.forEach(counter => {
-      const target = parseInt(counter.getAttribute('data-count'));
+      const rawTarget = counter.getAttribute('data-count');
+      if (rawTarget.includes('.')) {
+        counter.textContent = rawTarget;
+        return;
+      }
+      const target = parseInt(rawTarget);
       const increment = Math.ceil(target / 40);
       let current = 0;
 
@@ -194,35 +199,117 @@
   reveals.forEach(el => observer.observe(el));
 })();
 
-// ── Active Nav Highlight ──
-(function initActiveNav() {
-  const sections = document.querySelectorAll('.section, .hero');
-  const navLinks = document.querySelectorAll('.nav-link:not(.nav-cta)');
+// ── Project Filters ──
+(function initProjectFilters() {
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const projectCards = document.querySelectorAll('.project-card');
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const id = entry.target.id;
-        navLinks.forEach(link => {
-          link.style.color = '';
-          if (link.getAttribute('href') === `#${id}`) {
-            link.style.color = 'var(--accent)';
-          }
-        });
-      }
+  if (!filterBtns.length || !projectCards.length) return;
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.getAttribute('data-filter');
+
+      projectCards.forEach(card => {
+        const categories = (card.getAttribute('data-category') || '').split(' ');
+        if (filter === 'all' || categories.includes(filter)) {
+          card.style.display = 'flex';
+          setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          }, 50);
+        } else {
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(20px)';
+          setTimeout(() => {
+            card.style.display = 'none';
+          }, 300);
+        }
+      });
     });
-  }, { threshold: 0.3 });
-
-  sections.forEach(s => observer.observe(s));
+  });
 })();
 
-// ── Smooth anchor scroll ──
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', (e) => {
-    const target = document.querySelector(a.getAttribute('href'));
-    if (target) {
+// ── Interactive Live Preview Modal ──
+(function initLivePreviewModal() {
+  const modal = document.getElementById('previewModal');
+  const modalBackdrop = document.getElementById('modalBackdrop');
+  const modalCloseBtn = document.getElementById('modalCloseBtn');
+  const modalCloseDot = document.getElementById('modalCloseDot');
+  const modalReloadBtn = document.getElementById('modalReloadBtn');
+  const modalIframe = document.getElementById('modalIframe');
+  const modalLoader = document.getElementById('modalLoader');
+  const modalUrlText = document.getElementById('modalUrlText');
+  const modalExternalLink = document.getElementById('modalExternalLink');
+  const modalFrameWrapper = document.getElementById('modalFrameWrapper');
+  const deviceBtns = document.querySelectorAll('.device-btn');
+  const previewTriggers = document.querySelectorAll('.btn-preview-modal');
+
+  if (!modal || !modalIframe) return;
+
+  function openModal(url, title) {
+    modal.classList.add('active');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+
+    modalUrlText.textContent = url;
+    modalExternalLink.href = url;
+    modalLoader.classList.remove('hidden');
+
+    modalIframe.src = url;
+
+    modalIframe.onload = () => {
+      modalLoader.classList.add('hidden');
+    };
+  }
+
+  function closeModal() {
+    modal.classList.remove('active');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    modalIframe.src = '';
+  }
+
+  previewTriggers.forEach(btn => {
+    btn.addEventListener('click', (e) => {
       e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      const url = btn.getAttribute('data-preview-url');
+      const title = btn.getAttribute('data-preview-title');
+      if (url) openModal(url, title);
+    });
+  });
+
+  if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeModal);
+  if (modalCloseDot) modalCloseDot.addEventListener('click', closeModal);
+  if (modalBackdrop) modalBackdrop.addEventListener('click', closeModal);
+
+  if (modalReloadBtn) {
+    modalReloadBtn.addEventListener('click', () => {
+      const currentSrc = modalIframe.src;
+      if (currentSrc) {
+        modalLoader.classList.remove('hidden');
+        modalIframe.src = currentSrc;
+      }
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) {
+      closeModal();
     }
   });
-});
+
+  deviceBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      deviceBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const device = btn.getAttribute('data-device');
+      modalFrameWrapper.classList.remove('tablet', 'mobile');
+      if (device === 'tablet') modalFrameWrapper.classList.add('tablet');
+      if (device === 'mobile') modalFrameWrapper.classList.add('mobile');
+    });
+  });
+})();

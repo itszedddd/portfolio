@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cedrick Jay Tobias — Software Engineer</title>
-  <meta name="description" content="Portfolio of Cedrick Jay A. Tobias — Full-Stack Software Engineer, building intelligent systems with React, FastAPI, and Machine Learning.">
-  <meta property="og:title" content="Cedrick Jay Tobias — Software Engineer">
-  <meta property="og:description" content="Full-Stack Developer crafting modern, intelligent web applications.">
+  <title>Cedrick Jay Tobias — Full-Stack Software Engineer</title>
+  <meta name="description" content="Portfolio of Cedrick Jay A. Tobias — Full-Stack Software Engineer building intelligent systems with React, Next.js, FastAPI, Machine Learning, and Cryptography.">
+  <meta property="og:title" content="Cedrick Jay Tobias — Full-Stack Software Engineer">
+  <meta property="og:description" content="Full-Stack Developer crafting modern, intelligent web applications and secure systems.">
   <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +15,208 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+  <!-- ===== SVG TECH SYMBOLS ===== -->
+  <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <!-- React -->
+    <symbol id="logo-react" viewBox="-11.5 -10.23174 23 20.46348">
+      <circle cx="0" cy="0" r="2.05" fill="#61DAFB"/>
+      <g stroke="#61DAFB" stroke-width="1" fill="none">
+        <ellipse rx="11" ry="4.2"/>
+        <ellipse rx="11" ry="4.2" transform="rotate(60)"/>
+        <ellipse rx="11" ry="4.2" transform="rotate(120)"/>
+      </g>
+    </symbol>
+
+    <!-- Next.js -->
+    <symbol id="logo-nextjs" viewBox="0 0 180 180">
+      <circle cx="90" cy="90" r="90" fill="#000"/>
+      <path d="M149.508 159.486L69.605 56.4H54v67.2h14.4V75.645l69.6 89.871c3.78-1.92 7.32-4.14 11.503-6.03zM114 56.4h14.4v48.6L114 86.4V56.4z" fill="#fff"/>
+    </symbol>
+
+    <!-- FastAPI -->
+    <symbol id="logo-fastapi" viewBox="0 0 24 24">
+      <path fill="#05998B" d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0z"/>
+      <path fill="#fff" d="M12.5 4L6.5 13h5.5l-1 7 7.5-10.5h-6l1-5.5z"/>
+    </symbol>
+
+    <!-- Python -->
+    <symbol id="logo-python" viewBox="0 0 24 24">
+      <path fill="#3776AB" d="M11.9 2c-3.1 0-4.9.4-5.9 1.5C4.9 4.6 5 6.2 5 7.6v2.3h7.2v.9H5.1C3.4 10.8 2 12.3 2 14.5c0 2.2 1.5 3.6 3.7 3.6h2.2v-2.3c0-1.7 1.4-3.1 3.1-3.1h4.6c1.3 0 2.3-1.1 2.3-2.3V4.9C17.9 3.1 15 2 11.9 2zm-1.8 1.8c.6 0 1.1.5 1.1 1.1 0 .6-.5 1.1-1.1 1.1-.6 0-1.1-.5-1.1-1.1 0-.6.5-1.1 1.1-1.1z"/>
+      <path fill="#FFD43B" d="M12.1 22c3.1 0 4.9-.4 5.9-1.5 1.1-1.1 1-2.7 1-4.1v-2.3h-7.2v-.9h7.1c1.7 0 3.1-1.5 3.1-3.7 0-2.2-1.5-3.6-3.7-3.6h-2.2v2.3c0 1.7-1.4 3.1-3.1 3.1H8.4c-1.3 0-2.3 1.1-2.3 2.3v5.5c0 1.8 2.9 2.9 6 2.9zm1.8-1.8c-.6 0-1.1-.5-1.1-1.1 0-.6.5-1.1 1.1-1.1.6 0 1.1.5 1.1 1.1 0 .6-.5 1.1-1.1 1.1z"/>
+    </symbol>
+
+    <!-- TypeScript -->
+    <symbol id="logo-typescript" viewBox="0 0 24 24">
+      <rect width="24" height="24" rx="4" fill="#3178C6"/>
+      <path fill="#fff" d="M11.5 8.5H5.8v2.2h1.6v7.3H10v-7.3h1.5V8.5zm3.6 7.4c.7.4 1.6.6 2.4.6 1.4 0 2.2-.6 2.2-1.6 0-1-.6-1.5-2.1-2-1.8-.6-3-1.4-3-3.1 0-1.8 1.4-3.1 3.6-3.1 1.1 0 2 .3 2.7.7l-.7 2.1c-.6-.4-1.3-.6-2-.6-1 0-1.7.5-1.7 1.3 0 .9.6 1.3 2 1.8 2 .7 3.1 1.5 3.1 3.2 0 1.9-1.4 3.3-3.9 3.3-1.3 0-2.5-.4-3.3-.9l.7-2.1z"/>
+    </symbol>
+
+    <!-- JavaScript -->
+    <symbol id="logo-javascript" viewBox="0 0 24 24">
+      <rect width="24" height="24" rx="4" fill="#F7DF1E"/>
+      <path fill="#000" d="M12.8 17.5c.6.9 1.4 1.5 2.6 1.5 1.1 0 1.8-.5 1.8-1.3 0-.9-.7-1.3-2-1.8-1.9-.8-3.1-1.8-3.1-3.6 0-2 1.5-3.5 3.8-3.5 1.4 0 2.5.5 3.3 1.6l-1.9 1.2c-.4-.7-.9-1-1.4-1-.6 0-1 .4-1 .9 0 .6.4.9 1.4 1.3 2 .8 3.7 1.8 3.7 3.9 0 2.3-1.8 3.6-4.2 3.6-2.2 0-3.6-1.1-4.3-2.4l1.3-1.5zm-6.6.2c.4.7.8 1.2 1.6 1.2.8 0 1.3-.3 1.3-1.7v-8.2h2.5v8.3c0 2.6-1.5 3.8-3.6 3.8-1.9 0-3-1-3.6-2.2l1.8-1.2z"/>
+    </symbol>
+
+    <!-- Tailwind CSS -->
+    <symbol id="logo-tailwindcss" viewBox="0 0 24 24">
+      <path fill="#38BDF8" d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.336 13.382 8.975 12 6.001 12z"/>
+    </symbol>
+
+    <!-- Prisma -->
+    <symbol id="logo-prisma" viewBox="0 0 24 24">
+      <path fill="#5A67D8" d="M22.5 19.3L13.7 2.2c-.4-.7-1.3-1-2-.6-.3.2-.5.4-.6.7L2.4 17.5c-.4.7-.2 1.6.5 2 .2.1.5.2.8.2h17.4c.8 0 1.5-.6 1.5-1.4 0-.4-.1-.7-.1-1zm-9.3-13.4l6.4 12.3H5.8l7.4-12.3z"/>
+    </symbol>
+
+    <!-- PostgreSQL -->
+    <symbol id="logo-postgresql" viewBox="0 0 24 24">
+      <path fill="#336791" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.2 16.5c-2.3 0-4.2-1.5-4.7-3.6h2.2c.4 1 1.3 1.7 2.5 1.7 1.5 0 2.5-1 2.5-2.5V8.5h2v5.6c0 2.5-1.9 4.4-4.5 4.4zm-4.7-5.5H6.2V8.5h2.3v4.5z"/>
+    </symbol>
+
+    <!-- SQLite -->
+    <symbol id="logo-sqlite" viewBox="0 0 24 24">
+      <rect width="24" height="24" rx="4" fill="#003B57"/>
+      <path fill="#00ADEF" d="M7 6h10v3H7zm0 5h10v3H7zm0 5h6v3H7z"/>
+    </symbol>
+
+    <!-- MySQL -->
+    <symbol id="logo-mysql" viewBox="0 0 24 24">
+      <path fill="#00758F" d="M12 2C6.47 2 2 6.48 2 12s4.47 10 10 10 10-4.48 10-10S17.53 2 12 2zm4.5 13.5c-1.3.8-3 .8-4.5.3l.5-1.5c1 .3 2.2.3 3.1-.2.8-.5 1-1.3.6-2.1-.3-.6-1-1-1.8-1.2l-1.3-.3c-1.4-.3-2.4-1.2-2.1-2.7.3-1.4 1.6-2.3 3.2-2.3 1.2 0 2.4.4 3.4 1.1l-.6 1.6c-.8-.5-1.7-.8-2.6-.8-.9 0-1.5.4-1.7 1-.2.6.2 1.1.9 1.3l1.3.3c1.6.4 2.6 1.4 2.3 3-.2 1.1-.9 2-1.7 2.4z"/>
+    </symbol>
+
+    <!-- Java -->
+    <symbol id="logo-java" viewBox="0 0 24 24">
+      <path fill="#5382A1" d="M8.8 19.5s-.8.2-1.7.3c-2.4.3-3.6-.8-3.6-.8s.6.5 1.7.7c1.7.3 3.6-.2 3.6-.2zm-.3 1.9s-1.1.2-2.1.2c-2.8.1-4.3-.8-4.3-.8s.7.6 2 .8c2 .3 4.4-.2 4.4-.2z"/>
+      <path fill="#EA2D2E" d="M13.6 13.7c1.6-1.7.9-3.2.9-3.2s-.3.7-1.1 1.2c-1.1.7-2 .8-2.9 1.4-1.2.7-1.6 1.7-1.6 2.5 0 1.6 1.4 2.8 3.5 2.8 2.7 0 4.8-1.5 4.8-3.7 0-.5-.1-1-.2-1.4-.4 1.1-1.5 1.7-2.4 1.7-1.1 0-1.9-.6-1.9-1.3 0-.6.4-1.1 1-1.4.6-.3 1.2-.5 1.8-.8.6-.3 1-.7 1-1.2 0-.8-.7-1.5-1.8-1.5-1.2 0-2.1.7-2.1.7s.4-.4 1.1-.6c.7-.2 1.4-.2 1.9.1.6.3.9.8.9 1.4 0 .5-.3.9-.7 1.2-.4.3-.9.5-1.4.7-.6.2-1.1.5-1.5.9-.4.4-.6.9-.6 1.4 0 .9.8 1.6 1.9 1.6 1.4 0 2.5-.9 2.5-2.2 0-.3-.1-.6-.2-.9-.4.6-1.1.9-1.8.9-.7 0-1.2-.4-1.2-.9 0-.4.3-.8.7-1z"/>
+    </symbol>
+
+    <!-- C++ -->
+    <symbol id="logo-cpp" viewBox="0 0 24 24">
+      <path fill="#00599C" d="M12 2L2 7.8v11.4L12 25l10-5.8V7.8L12 2zm-1.8 14.8c-2.4 0-4.2-1.8-4.2-4.2s1.8-4.2 4.2-4.2c1.4 0 2.6.6 3.3 1.6l-1.4 1.1c-.5-.7-1.1-1-1.9-1-1.4 0-2.4 1.1-2.4 2.5s1 2.5 2.4 2.5c.8 0 1.5-.4 1.9-1l1.4 1.1c-.7 1-1.9 1.7-3.3 1.7zm6.8-3.4h-1.2v1.2h-.8v-1.2h-1.2v-.8h1.2v-1.2h.8v1.2h1.2v.8zm3.5 0h-1.2v1.2h-.8v-1.2h-1.2v-.8h1.2v-1.2h.8v1.2h1.2v.8z"/>
+    </symbol>
+
+    <!-- PHP -->
+    <symbol id="logo-php" viewBox="0 0 24 24">
+      <ellipse cx="12" cy="12" rx="10" ry="6" fill="#777BB4"/>
+      <path fill="#fff" d="M8.2 11.2h-1v1.6H6V9.2h2.2c1 0 1.6.5 1.6 1.3 0 .5-.3.7-.8.7h-.8zm0-.8c.3 0 .5-.2.5-.5s-.2-.5-.5-.5h-.9v1h.9zm4.2.8h-1v2.8H10V9.2h1.4v1.8h1c.4 0 .8.2.8.6v2.4h-1.4v-2.2c0-.3-.2-.6-.6-.6zm5.4 0h-1v1.6h-1.2V9.2H17c1 0 1.6.5 1.6 1.3 0 .5-.3.7-.8.7h-.8zm0-.8c.3 0 .5-.2.5-.5s-.2-.5-.5-.5h-.9v1h.9z"/>
+    </symbol>
+
+    <!-- Vite -->
+    <symbol id="logo-vite" viewBox="0 0 24 24">
+      <path fill="#646CFF" d="M21.5 4.3L12.7 20.4c-.3.5-1 .5-1.3 0L2.5 4.3c-.4-.7.2-1.5.9-1.3l8.6 2.3 8.6-2.3c.7-.2 1.3.6.9 1.3z"/>
+      <path fill="#FFD62E" d="M12.9 3.2L6.8 14.3h4.6l-1.5 5.5 6.8-11.4h-4.8l1-5.2z"/>
+    </symbol>
+
+    <!-- Node.js -->
+    <symbol id="logo-nodejs" viewBox="0 0 24 24">
+      <path fill="#5FA04E" d="M12 2l8.7 5v10L12 22l-8.7-5V7L12 2zm0 2.3L5.3 8.2v7.6L12 19.7l6.7-3.9V8.2L12 4.3z"/>
+      <circle cx="12" cy="12" r="3" fill="#5FA04E"/>
+    </symbol>
+
+    <!-- Express -->
+    <symbol id="logo-express" viewBox="0 0 24 24">
+      <rect width="24" height="24" rx="4" fill="#1e293b"/>
+      <text x="12" y="16" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="bold" fill="#00ffff" text-anchor="middle">ex</text>
+    </symbol>
+
+    <!-- Expo -->
+    <symbol id="logo-expo" viewBox="0 0 24 24">
+      <path fill="#fff" d="M12 3l9.5 16.5H2.5L12 3zm0 4.5L5.7 17.5h12.6L12 7.5z"/>
+    </symbol>
+
+    <!-- React Native -->
+    <symbol id="logo-reactnative" viewBox="-11.5 -10.23174 23 20.46348">
+      <circle cx="0" cy="0" r="2.05" fill="#61DAFB"/>
+      <g stroke="#61DAFB" stroke-width="1.2" fill="none">
+        <ellipse rx="11" ry="4.2"/>
+        <ellipse rx="11" ry="4.2" transform="rotate(60)"/>
+        <ellipse rx="11" ry="4.2" transform="rotate(120)"/>
+      </g>
+    </symbol>
+
+    <!-- Scikit-learn -->
+    <symbol id="logo-scikit" viewBox="0 0 24 24">
+      <circle cx="8" cy="12" r="6" fill="#F7931E"/>
+      <circle cx="16" cy="12" r="6" fill="#3499CD" opacity="0.85"/>
+      <text x="12" y="15" font-family="sans-serif" font-size="8" font-weight="bold" fill="#fff" text-anchor="middle">ML</text>
+    </symbol>
+
+    <!-- Tesseract OCR -->
+    <symbol id="logo-tesseract" viewBox="0 0 24 24">
+      <path fill="#00ffff" d="M3 5v4h2V7h2V5H3zm0 14h4v-2H5v-2H3v4zm14 2h4v-4h-2v2h-2v2zm4-16h-4v2h2v2h2V5z"/>
+      <rect x="7" y="9" width="10" height="2" fill="#00ffff"/>
+      <rect x="7" y="13" width="7" height="2" fill="#00ffff"/>
+    </symbol>
+
+    <!-- Recharts -->
+    <symbol id="logo-recharts" viewBox="0 0 24 24">
+      <path fill="#22b5bf" d="M3 21h18v-2H3v2zM6 17h3v-6H6v6zm5 0h3V7h-3v10zm5 0h3v-8h-3v8z"/>
+    </symbol>
+
+    <!-- HTML5 -->
+    <symbol id="logo-html5" viewBox="0 0 24 24">
+      <path fill="#E34F26" d="M3 2l1.6 18.2L12 22l7.4-1.8L21 2H3zm14.8 5.4H8.4l.2 2.3h8.8l-.6 6.8-4.8 1.3-4.8-1.3-.3-3.7h2.3l.2 1.8 2.6.7 2.6-.7.3-3.2H6.1L5.4 5.2h12.7l-.3 2.2z"/>
+    </symbol>
+
+    <!-- CSS3 -->
+    <symbol id="logo-css3" viewBox="0 0 24 24">
+      <path fill="#1572B6" d="M3 2l1.6 18.2L12 22l7.4-1.8L21 2H3zm14.8 5.4H8.4l.2 2.3h8.8l-.6 6.8-4.8 1.3-4.8-1.3-.3-3.7h2.3l.2 1.8 2.6.7 2.6-.7.3-3.2H6.1L5.4 5.2h12.7l-.3 2.2z"/>
+    </symbol>
+
+    <!-- Git -->
+    <symbol id="logo-git" viewBox="0 0 24 24">
+      <path fill="#F05032" d="M21.7 10.9L13.1 2.3c-.4-.4-1-.4-1.4 0L9.4 4.6l2.9 2.9c.4-.1.9 0 1.2.3.4.4.5 1 .3 1.5l2.8 2.8c.5-.2 1.1-.1 1.5.3.6.6.6 1.5 0 2.1-.6.6-1.5.6-2.1 0-.4-.4-.5-1-.3-1.5L13 10.2v4.8c.2.1.3.3.4.5.6.6.6 1.5 0 2.1-.6.6-1.5.6-2.1 0-.6-.6-.6-1.5 0-2.1.2-.2.4-.4.6-.5V10c-.2-.1-.4-.3-.6-.5-.4-.4-.5-1-.3-1.5L8.1 5.1 2.3 10.9c-.4.4-.4 1 0 1.4l8.6 8.6c.4.4 1 .4 1.4 0l9.4-9.4c.4-.4.4-1.2 0-1.6z"/>
+    </symbol>
+
+    <!-- GitHub -->
+    <symbol id="logo-github" viewBox="0 0 24 24">
+      <path fill="#fff" d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/>
+    </symbol>
+
+    <!-- Shadcn UI -->
+    <symbol id="logo-shadcn" viewBox="0 0 24 24">
+      <rect width="24" height="24" rx="4" fill="#000"/>
+      <path stroke="#fff" stroke-width="2.5" stroke-linecap="round" d="M16 6L7 18"/>
+    </symbol>
+
+    <!-- NextAuth.js -->
+    <symbol id="logo-nextauth" viewBox="0 0 24 24">
+      <path fill="#7C3AED" d="M12 2L4 5v6.1c0 5 3.4 9.7 8 10.9 4.6-1.2 8-5.9 8-10.9V5l-8-3zm0 7c1.4 0 2.5 1.1 2.5 2.5 0 .9-.5 1.7-1.2 2.1v2.9h-2.6v-2.9c-.7-.4-1.2-1.2-1.2-2.1C9.5 10.1 10.6 9 12 9z"/>
+    </symbol>
+
+    <!-- JWT -->
+    <symbol id="logo-jwt" viewBox="0 0 24 24">
+      <path fill="#D63AFF" d="M12 2l8.7 5v10L12 22l-8.7-5V7L12 2z"/>
+      <path fill="#fff" d="M8 10h8v1.5H8V10zm0 3h8v1.5H8V13z"/>
+    </symbol>
+
+    <!-- SQLAlchemy -->
+    <symbol id="logo-sqlalchemy" viewBox="0 0 24 24">
+      <path fill="#D71F00" d="M12 2a1 1 0 0 0-.8.4L3.6 13.5a1 1 0 0 0 .8 1.5h15.2a1 1 0 0 0 .8-1.5L12.8 2.4A1 1 0 0 0 12 2zm0 4.2l5.7 8.8H6.3L12 6.2z"/>
+      <circle cx="12" cy="18" r="2" fill="#D71F00"/>
+    </symbol>
+
+    <!-- Vercel -->
+    <symbol id="logo-vercel" viewBox="0 0 24 24">
+      <path fill="#fff" d="M12 2L24 22H0L12 2z"/>
+    </symbol>
+
+    <!-- Java Swing / GUI -->
+    <symbol id="logo-swing" viewBox="0 0 24 24">
+      <rect x="2" y="3" width="20" height="18" rx="3" fill="#1e293b" stroke="#00ffff" stroke-width="1.5"/>
+      <rect x="2" y="3" width="20" height="5" fill="#334155"/>
+      <circle cx="5" cy="5.5" r="1" fill="#ff5f56"/>
+      <circle cx="8" cy="5.5" r="1" fill="#ffbd2e"/>
+      <circle cx="11" cy="5.5" r="1" fill="#27c93f"/>
+      <rect x="5" y="11" width="8" height="2" fill="#00ffff"/>
+      <rect x="5" y="15" width="14" height="2" fill="#64748b"/>
+    </symbol>
+
+    <!-- Security / Lock -->
+    <symbol id="logo-crypto" viewBox="0 0 24 24">
+      <path fill="#00ffff" d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+    </symbol>
+  </svg>
 
   <!-- ===== CURSOR GLOW ===== -->
   <div class="cursor-glow" id="cursorGlow"></div>
@@ -59,12 +261,12 @@
             <span class="typing-text" id="typingRole"></span><span class="cursor-blink">▊</span>
           </p>
           <p class="terminal-line delay-3"><span class="prompt">$</span> <span class="cmd">echo $STATUS</span></p>
-          <p class="terminal-output delay-4">🟢 Open to opportunities — Building the future, one commit at a time.</p>
+          <p class="terminal-output delay-4">🟢 Open to opportunities — Building modern intelligent systems, one commit at a time.</p>
         </div>
       </div>
       <div class="hero-actions">
         <a href="#projects" class="btn btn-primary">
-          <span class="btn-icon">⚡</span> View My Work
+          <span class="btn-icon">⚡</span> View Projects & Previews
         </a>
         <a href="#contact" class="btn btn-outline">
           <span class="btn-icon">📨</span> Get In Touch
@@ -72,16 +274,20 @@
       </div>
       <div class="hero-stats">
         <div class="stat-item">
-          <span class="stat-number" data-count="6">0</span><span class="stat-plus">+</span>
+          <span class="stat-number" data-count="10">0</span><span class="stat-plus">+</span>
           <span class="stat-label">Projects</span>
         </div>
         <div class="stat-item">
-          <span class="stat-number" data-count="10">0</span><span class="stat-plus">+</span>
+          <span class="stat-number" data-count="5">0</span>
+          <span class="stat-label">Live Vercel Apps</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-count="18">0</span><span class="stat-plus">+</span>
           <span class="stat-label">Technologies</span>
         </div>
         <div class="stat-item">
-          <span class="stat-number" data-count="3">0</span>
-          <span class="stat-label">Languages</span>
+          <span class="stat-number" data-count="1.4">1.4</span>
+          <span class="stat-label">Dean's List GPA</span>
         </div>
       </div>
     </div>
@@ -105,10 +311,10 @@
             Hey! I'm <strong>Cedrick Jay Tobias</strong> — a <span class="highlight">Full-Stack Software Engineer</span> based in Metro Manila, Philippines. I'm currently pursuing a BS in Computer Science at Immaculada Concepcion College.
           </p>
           <p>
-            I specialize in building modern, full-stack applications with <span class="highlight">React</span>, <span class="highlight">Next.js</span>, and <span class="highlight">FastAPI</span>, with a focus on integrating <span class="highlight">Machine Learning</span> and <span class="highlight">Computer Vision</span> into practical systems. I've built everything from AI-assisted school management platforms to secure cryptography tools.
+            I specialize in architecting modern full-stack systems with <span class="highlight">React</span>, <span class="highlight">Next.js</span>, and <span class="highlight">FastAPI</span>, with hands-on experience integrating <span class="highlight">Machine Learning</span> and <span class="highlight">Computer Vision (OCR)</span> into real-world school operations, fintech workflows, and cryptographic utilities.
           </p>
           <p>
-            When I'm not coding, I'm exploring new technologies, contributing to open-source, or editing videos for international clients. I'm a Dean's Lister (GPA 1.4) and a DOST Game Development Bootcamp graduate.
+            Dean's Lister with a <strong>1.4 GPA</strong>, DOST NCR Game Development Bootcamp graduate, and 1st Runner Up in Automata Design. When I'm not coding, I contribute to open-source software and collaborate on freelance digital media projects.
           </p>
           <div class="about-details">
             <div class="detail-item">
@@ -133,18 +339,18 @@
           <div class="card-glow"></div>
           <div class="code-block">
             <pre><code><span class="code-keyword">const</span> <span class="code-var">cedrick</span> = {
-  <span class="code-key">role</span>: <span class="code-string">"Full-Stack Developer"</span>,
+  <span class="code-key">role</span>: <span class="code-string">"Full-Stack Software Engineer"</span>,
   <span class="code-key">education</span>: <span class="code-string">"BS Computer Science"</span>,
-  <span class="code-key">school</span>: <span class="code-string">"ICC Caloocan"</span>,
-  <span class="code-key">passions</span>: [
-    <span class="code-string">"Web Development"</span>,
-    <span class="code-string">"Machine Learning"</span>,
-    <span class="code-string">"Cryptography"</span>,
-    <span class="code-string">"System Design"</span>
+  <span class="code-key">specialties</span>: [
+    <span class="code-string">"React & Next.js"</span>,
+    <span class="code-string">"FastAPI Python Backends"</span>,
+    <span class="code-string">"Applied ML & Tesseract OCR"</span>,
+    <span class="code-string">"AES & Cryptographic Systems"</span>
   ],
-  <span class="code-key">status</span>: <span class="code-string">"Open to work"</span>,
-  <span class="code-method">buildSomethingAwesome</span>() {
-    <span class="code-keyword">return</span> <span class="code-string">"Let's go! 🚀"</span>;
+  <span class="code-key">deployedProjects</span>: <span class="code-string">"5 Live on Vercel"</span>,
+  <span class="code-key">status</span>: <span class="code-string">"Open to opportunities"</span>,
+  <span class="code-method">buildImpactfulSoftware</span>() {
+    <span class="code-keyword">return</span> <span class="code-string">"Ready to create! 🚀"</span>;
   }
 };</code></pre>
           </div>
@@ -153,253 +359,759 @@
     </div>
   </section>
 
-  <!-- ===== SKILLS ===== -->
+  <!-- ===== SKILLS / TECH STACK ===== -->
   <section class="section section-alt" id="skills">
     <div class="container">
       <h2 class="section-title" data-reveal>
         <span class="section-tag">&lt;skills&gt;</span>
-        Tech Stack
+        Tech Stack & Tooling
         <span class="section-tag">&lt;/skills&gt;</span>
       </h2>
       <div class="skills-grid" data-reveal>
+        <!-- Languages -->
         <div class="skill-category">
           <h3 class="skill-category-title">
             <span class="cat-icon">💻</span> Languages
           </h3>
           <div class="skill-tags">
-            <span class="skill-tag">Java</span>
-            <span class="skill-tag">TypeScript</span>
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">C++</span>
-            <span class="skill-tag">PHP</span>
-            <span class="skill-tag">SQL</span>
-            <span class="skill-tag">HTML5</span>
-            <span class="skill-tag">CSS3</span>
+            <span class="skill-tag"><svg class="tech-icon"><use href="#logo-typescript"/></svg> TypeScript</span>
+            <span class="skill-tag"><svg class="tech-icon"><use href="#logo-javascript"/></svg> JavaScript</span>
+            <span class="skill-tag"><svg class="tech-icon"><use href="#logo-python"/></svg> Python</span>
+            <span class="skill-tag"><svg class="tech-icon"><use href="#logo-java"/></svg> Java</span>
+            <span class="skill-tag"><svg class="tech-icon"><use href="#logo-cpp"/></svg> C++</span>
+            <span class="skill-tag"><svg class="tech-icon"><use href="#logo-php"/></svg> PHP</span>
+            <span class="skill-tag"><svg class="tech-icon"><use href="#logo-html5"/></svg> HTML5</span>
+            <span class="skill-tag"><svg class="tech-icon"><use href="#logo-css3"/></svg> CSS3</span>
           </div>
         </div>
+
+        <!-- Frameworks & Frontend -->
         <div class="skill-category">
           <h3 class="skill-category-title">
-            <span class="cat-icon">⚛️</span> Frameworks
+            <span class="cat-icon">⚛️</span> Frameworks & UI
           </h3>
           <div class="skill-tags">
-            <span class="skill-tag featured">React.js</span>
-            <span class="skill-tag featured">Next.js</span>
-            <span class="skill-tag featured">FastAPI</span>
-            <span class="skill-tag">React Native</span>
-            <span class="skill-tag">Tailwind CSS</span>
-            <span class="skill-tag">Shadcn UI</span>
-            <span class="skill-tag">Prisma ORM</span>
-            <span class="skill-tag">NextAuth.js</span>
-            <span class="skill-tag">Laravel</span>
-            <span class="skill-tag">Bootstrap</span>
+            <span class="skill-tag featured"><svg class="tech-icon"><use href="#logo-react"/></svg> React.js 19</span>
+            <span class="skill-tag featured"><svg class="tech-icon"><use href="#logo-nextjs"/></svg> Next.js 16/15</span>
+            <span class="skill-tag featured"><svg class="tech-icon"><use href="#logo-fastapi"/></svg> FastAPI</span>
+            <span class="skill-tag"><svg class="tech-icon"><use href="#logo-tailwindcss"/></svg> Tailwind CSS</span>
+            <span class="skill-tag"><svg class="tech-icon"><use href="#logo-shadcn"/></svg> Shadcn UI</span>
+            <span class="skill-tag"><svg class="tech-icon"><use href="#logo-reactnative"/></svg> React Native</span>
+            <span class="skill-tag"><svg class="tech-icon"><use href="#logo-expo"/></svg> Expo Router</span>
+            <span class="skill-tag"><svg class="tech-icon"><use href="#logo-nodejs"/></svg> Node.js</span>
+            <span class="skill-tag"><svg class="tech-icon"><use href="#logo-express"/></svg> Express</span>
           </div>
         </div>
+
+        <!-- Databases & ORM -->
         <div class="skill-category">
           <h3 class="skill-category-title">
-            <span class="cat-icon">🗄️</span> Databases
+            <span class="cat-icon">🗄️</span> Databases & ORM
           </h3>
           <div class="skill-tags">
-            <span class="skill-tag">PostgreSQL</span>
-            <span class="skill-tag">SQLite</span>
-            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag"><svg class="tech-icon"><use href="#logo-postgresql"/></svg> PostgreSQL</span>
+            <span class="skill-tag"><svg class="tech-icon"><use href="#logo-sqlite"/></svg> SQLite</span>
+            <span class="skill-tag"><svg class="tech-icon"><use href="#logo-mysql"/></svg> MySQL</span>
+            <span class="skill-tag"><svg class="tech-icon"><use href="#logo-prisma"/></svg> Prisma ORM</span>
+            <span class="skill-tag"><svg class="tech-icon"><use href="#logo-sqlalchemy"/></svg> SQLAlchemy</span>
           </div>
         </div>
+
+        <!-- AI, Security & Architecture -->
         <div class="skill-category">
           <h3 class="skill-category-title">
-            <span class="cat-icon">🛠️</span> Tools & Core
+            <span class="cat-icon">🧠</span> AI, Security & Cloud
           </h3>
           <div class="skill-tags">
-            <span class="skill-tag">Git / GitHub</span>
-            <span class="skill-tag">Vite</span>
-            <span class="skill-tag">Tesseract OCR</span>
-            <span class="skill-tag">Scikit-learn</span>
-            <span class="skill-tag">REST APIs</span>
-            <span class="skill-tag">VS Code</span>
-            <span class="skill-tag">OOP</span>
-            <span class="skill-tag">ML Integration</span>
-            <span class="skill-tag">Cryptography</span>
-            <span class="skill-tag">SSR</span>
+            <span class="skill-tag"><svg class="tech-icon"><use href="#logo-tesseract"/></svg> Tesseract OCR</span>
+            <span class="skill-tag"><svg class="tech-icon"><use href="#logo-scikit"/></svg> Scikit-learn ML</span>
+            <span class="skill-tag"><svg class="tech-icon"><use href="#logo-crypto"/></svg> AES-256 Crypto</span>
+            <span class="skill-tag"><svg class="tech-icon"><use href="#logo-jwt"/></svg> JWT Auth</span>
+            <span class="skill-tag"><svg class="tech-icon"><use href="#logo-nextauth"/></svg> NextAuth.js</span>
+            <span class="skill-tag"><svg class="tech-icon"><use href="#logo-vite"/></svg> Vite</span>
+            <span class="skill-tag"><svg class="tech-icon"><use href="#logo-vercel"/></svg> Vercel Deployment</span>
+            <span class="skill-tag"><svg class="tech-icon"><use href="#logo-git"/></svg> Git / GitHub</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== PROJECTS ===== -->
+  <!-- ===== PROJECTS WITH INTERACTIVE PREVIEWS & STACK LOGOS ===== -->
   <section class="section" id="projects">
     <div class="container">
-      <h2 class="section-title" data-reveal>
-        <span class="section-tag">&lt;projects&gt;</span>
-        Featured Work
-        <span class="section-tag">&lt;/projects&gt;</span>
-      </h2>
-      <div class="projects-grid" data-reveal>
+      <div class="projects-section-header" data-reveal>
+        <h2 class="section-title">
+          <span class="section-tag">&lt;projects&gt;</span>
+          Featured Projects & Live Previews
+          <span class="section-tag">&lt;/projects&gt;</span>
+        </h2>
+        <p class="section-subtitle">
+          Explore complete systems built from scratch. Click <strong>⚡ Live Preview</strong> on any card to test the live Vercel deployments directly on this page!
+        </p>
 
-        <!-- Project 1: CCA Academic Monitoring System -->
-        <article class="project-card featured-project">
-          <div class="project-glow"></div>
-          <div class="project-header">
-            <span class="project-icon">🎓</span>
-            <div class="project-links">
-              <a href="https://github.com/itszedddd" target="_blank" rel="noopener" class="project-link" title="GitHub">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-              </a>
+        <!-- Project Category Filters -->
+        <div class="project-filters" id="projectFilters">
+          <button class="filter-btn active" data-filter="all">All Projects (10)</button>
+          <button class="filter-btn" data-filter="vercel">🚀 Live on Vercel (5)</button>
+          <button class="filter-btn" data-filter="fullstack">⚛️ Full-Stack & AI</button>
+          <button class="filter-btn" data-filter="mobile-desktop">📱 Mobile & Desktop</button>
+          <button class="filter-btn" data-filter="security">🔐 Security & Systems</button>
+        </div>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid" data-reveal>
+
+        <!-- ==========================================
+             PROJECT 1: CCA Academic Monitoring System (Thesis)
+             ========================================== -->
+        <article class="project-card featured-project" data-category="fullstack vercel">
+          <div class="project-preview-mockup">
+            <div class="mockup-bar">
+              <div class="mockup-dots">
+                <span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span>
+              </div>
+              <div class="mockup-address">
+                <span class="lock-icon">🔒</span> https://www.ccaedusys.site
+              </div>
+              <span class="mockup-badge badge-live">● Live on Vercel</span>
+            </div>
+            <div class="preview-viewport">
+              <!-- Visual HUD Preview Graphic -->
+              <div class="preview-hud hud-cca">
+                <div class="hud-top">
+                  <div class="hud-pill"><span class="pulse-dot"></span> OCR System Online</div>
+                  <div class="hud-stat">Confidence: <strong>99.4%</strong></div>
+                </div>
+                <div class="hud-body">
+                  <div class="hud-card">
+                    <span class="hud-label">Early Warning System (EWS)</span>
+                    <div class="hud-meter"><div class="meter-fill green" style="width: 88%"></div></div>
+                    <span class="hud-val">Student Success Metric: Optimal</span>
+                  </div>
+                  <div class="hud-card">
+                    <span class="hud-label">Document Digitization</span>
+                    <div class="hud-badge-sm">Tesseract OCR Active</div>
+                    <span class="hud-val">FastAPI ML Pipeline</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Hover Overlay with Actions -->
+              <div class="preview-overlay">
+                <button class="btn btn-preview-modal" data-preview-url="https://www.ccaedusys.site" data-preview-title="CCA Academic Monitoring System">
+                  ⚡ Live Interactive Preview
+                </button>
+                <a href="https://www.ccaedusys.site" target="_blank" rel="noopener" class="btn btn-ext-link">
+                  ↗ Visit Website
+                </a>
+              </div>
             </div>
           </div>
-          <h3 class="project-title">CCA Academic Monitoring System</h3>
-          <p class="project-role">Thesis Project — Full Stack Developer</p>
-          <p class="project-desc">
-            AI-assisted Student Information and Academic Monitoring System with Tesseract OCR for automated enrollment workflows and Scikit-learn ML models for Early Warning System (EWS) to predict tuition payment risks.
-          </p>
-          <div class="project-tech">
-            <span>React 19</span>
-            <span>FastAPI</span>
-            <span>Vite</span>
-            <span>Tesseract OCR</span>
-            <span>Scikit-learn</span>
-            <span>SQLite</span>
+
+          <div class="project-content">
+            <div class="project-header">
+              <span class="project-badge">🎓 Thesis Capstone Project</span>
+              <div class="project-links">
+                <a href="https://www.ccaedusys.site" target="_blank" rel="noopener" class="project-link" title="Live Vercel Site">
+                  <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+                <a href="https://github.com/itszedddd" target="_blank" rel="noopener" class="project-link" title="GitHub Repository">
+                  <svg class="link-icon" viewBox="0 0 24 24"><use href="#logo-github"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Calvary Christian Academy (CCA) Academic Monitoring System</h3>
+            <p class="project-role">Lead Full-Stack Software Engineer & AI Integrator</p>
+            <p class="project-desc">
+              AI-assisted Student Information & Academic Monitoring System built for Calvary Christian Academy. Automates document intake and student enrollment workflows using <strong>Tesseract OCR</strong>, and features a <strong>Scikit-learn</strong> Machine Learning Early Warning System (EWS) to predict student tuition payment risks and academic difficulties.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-react"/></svg> React 19</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-fastapi"/></svg> FastAPI</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-python"/></svg> Python</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-tesseract"/></svg> Tesseract OCR</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-scikit"/></svg> Scikit-learn</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-tailwindcss"/></svg> Tailwind CSS</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-sqlite"/></svg> SQLite</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-vercel"/></svg> Vercel</span>
+            </div>
           </div>
         </article>
 
-        <!-- Project 2: CCA CashFlow System -->
-        <article class="project-card">
-          <div class="project-glow"></div>
-          <div class="project-header">
-            <span class="project-icon">💰</span>
-            <div class="project-links">
-              <a href="https://cca-cashflow-system.vercel.app" target="_blank" rel="noopener" class="project-link" title="Live Site">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-              <a href="https://github.com/itszedddd/CCA-CashFLow-System" target="_blank" rel="noopener" class="project-link" title="GitHub">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-              </a>
+        <!-- ==========================================
+             PROJECT 2: CCA CashFlow System
+             ========================================== -->
+        <article class="project-card" data-category="fullstack vercel">
+          <div class="project-preview-mockup">
+            <div class="mockup-bar">
+              <div class="mockup-dots">
+                <span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span>
+              </div>
+              <div class="mockup-address">
+                <span class="lock-icon">🔒</span> https://cca-cashflow-system.vercel.app
+              </div>
+              <span class="mockup-badge badge-live">● Live on Vercel</span>
+            </div>
+            <div class="preview-viewport">
+              <div class="preview-hud hud-cashflow">
+                <div class="hud-top">
+                  <div class="hud-pill"><span class="pulse-dot"></span> Ledger Synced</div>
+                  <div class="hud-stat text-cyan">Net Inflow: <strong>+₱1,248,500</strong></div>
+                </div>
+                <div class="hud-chart-mockup">
+                  <div class="bar-col" style="height: 45%"></div>
+                  <div class="bar-col" style="height: 70%"></div>
+                  <div class="bar-col" style="height: 55%"></div>
+                  <div class="bar-col" style="height: 85%"></div>
+                  <div class="bar-col active" style="height: 95%"></div>
+                </div>
+                <div class="hud-footer-tag">Role: Cashier / Admin Portal (JWT Secured)</div>
+              </div>
+              <div class="preview-overlay">
+                <button class="btn btn-preview-modal" data-preview-url="https://cca-cashflow-system.vercel.app" data-preview-title="CCA CashFlow System">
+                  ⚡ Live Interactive Preview
+                </button>
+                <a href="https://cca-cashflow-system.vercel.app" target="_blank" rel="noopener" class="btn btn-ext-link">
+                  ↗ Visit Website
+                </a>
+              </div>
             </div>
           </div>
-          <h3 class="project-title">CCA CashFlow System</h3>
-          <p class="project-role">Full Stack Developer</p>
-          <p class="project-desc">
-            School cashflow management system with real-time dashboards, budget tracking, approval workflows, role-based access, and full audit trails. React + FastAPI with JWT auth.
-          </p>
-          <div class="project-tech">
-            <span>React 19</span>
-            <span>FastAPI</span>
-            <span>Recharts</span>
-            <span>JWT</span>
-            <span>SQLAlchemy</span>
+
+          <div class="project-content">
+            <div class="project-header">
+              <span class="project-badge">💰 Fintech / Management</span>
+              <div class="project-links">
+                <a href="https://cca-cashflow-system.vercel.app" target="_blank" rel="noopener" class="project-link" title="Live Vercel Site">
+                  <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+                <a href="https://github.com/itszedddd/CCA-CashFLow-System" target="_blank" rel="noopener" class="project-link" title="GitHub Repository">
+                  <svg class="link-icon" viewBox="0 0 24 24"><use href="#logo-github"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">CCA CashFlow System</h3>
+            <p class="project-role">Full-Stack Lead Architect</p>
+            <p class="project-desc">
+              School cashflow and accounting management platform. Provides real-time financial telemetry dashboards, interactive balance analytics via <strong>Recharts</strong>, automated ledger categorization, multi-tier approval workflows, and immutable audit logs.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-react"/></svg> React 19</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-fastapi"/></svg> FastAPI</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-python"/></svg> Python</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-recharts"/></svg> Recharts</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-sqlalchemy"/></svg> SQLAlchemy</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-jwt"/></svg> JWT Auth</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-vite"/></svg> Vite</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-vercel"/></svg> Vercel</span>
+            </div>
           </div>
         </article>
 
-        <!-- Project 3: HOP Veterinary System -->
-        <article class="project-card">
-          <div class="project-glow"></div>
-          <div class="project-header">
-            <span class="project-icon">🐾</span>
-            <div class="project-links">
-              <a href="https://github.com/itszedddd" target="_blank" rel="noopener" class="project-link" title="GitHub">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-              </a>
+        <!-- ==========================================
+             PROJECT 3: House of Puppies (HOP)
+             ========================================== -->
+        <article class="project-card" data-category="fullstack vercel">
+          <div class="project-preview-mockup">
+            <div class="mockup-bar">
+              <div class="mockup-dots">
+                <span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span>
+              </div>
+              <div class="mockup-address">
+                <span class="lock-icon">🔒</span> https://houseofpuppies.vercel.app
+              </div>
+              <span class="mockup-badge badge-live">● Live on Vercel</span>
+            </div>
+            <div class="preview-viewport">
+              <div class="preview-hud hud-hop">
+                <div class="hud-top">
+                  <div class="hud-pill"><span class="pulse-dot"></span> Clinic Portal</div>
+                  <div class="hud-stat">Patient: <strong>Golden Retriever (Max)</strong></div>
+                </div>
+                <div class="hud-body">
+                  <div class="hud-card">
+                    <span class="hud-label">Active E-Prescriptions</span>
+                    <span class="hud-val text-cyan">Amoxicillin 250mg • BID</span>
+                  </div>
+                  <div class="hud-card">
+                    <span class="hud-label">Appointment Reminders</span>
+                    <span class="hud-badge-sm">SMS Gateway Connected</span>
+                  </div>
+                </div>
+              </div>
+              <div class="preview-overlay">
+                <button class="btn btn-preview-modal" data-preview-url="https://houseofpuppies.vercel.app" data-preview-title="House of Puppies Clinic System">
+                  ⚡ Live Interactive Preview
+                </button>
+                <a href="https://houseofpuppies.vercel.app" target="_blank" rel="noopener" class="btn btn-ext-link">
+                  ↗ Visit Website
+                </a>
+              </div>
             </div>
           </div>
-          <h3 class="project-title">House of Puppies (HOP)</h3>
-          <p class="project-role">Full Stack Developer</p>
-          <p class="project-desc">
-            Veterinary clinic management system with pet health records, e-prescriptions, inventory management, AI-integrated SMS reminders, and role-based access control.
-          </p>
-          <div class="project-tech">
-            <span>Next.js 15</span>
-            <span>Prisma</span>
-            <span>Shadcn UI</span>
-            <span>NextAuth.js</span>
-            <span>SQLite</span>
+
+          <div class="project-content">
+            <div class="project-header">
+              <span class="project-badge">🐾 Clinic & Grooming Portal</span>
+              <div class="project-links">
+                <a href="https://houseofpuppies.vercel.app" target="_blank" rel="noopener" class="project-link" title="Live Vercel Site">
+                  <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+                <a href="https://github.com/itszedddd" target="_blank" rel="noopener" class="project-link" title="GitHub Repository">
+                  <svg class="link-icon" viewBox="0 0 24 24"><use href="#logo-github"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">House of Puppies (HOP) Veterinary Management System</h3>
+            <p class="project-role">Full-Stack Next.js Architect</p>
+            <p class="project-desc">
+              Unified enterprise platform managing pet electronic medical records (EMR), automated digital prescriptions, inventory tracking, grooming appointment scheduling with SMS integration, and NextAuth-secured role hierarchy.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-nextjs"/></svg> Next.js 16/15</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-typescript"/></svg> TypeScript</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-react"/></svg> React 19</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-prisma"/></svg> Prisma ORM</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-nextauth"/></svg> NextAuth.js</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-shadcn"/></svg> Shadcn UI</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-tailwindcss"/></svg> Tailwind CSS</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-vercel"/></svg> Vercel</span>
+            </div>
           </div>
         </article>
 
-        <!-- Project 4: AES Encryption Tool -->
-        <article class="project-card">
-          <div class="project-glow"></div>
-          <div class="project-header">
-            <span class="project-icon">🔐</span>
-            <div class="project-links">
-              <a href="https://github.com/itszedddd" target="_blank" rel="noopener" class="project-link" title="GitHub">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-              </a>
+        <!-- ==========================================
+             PROJECT 4: DREM Industrial Sales Corporate Website
+             ========================================== -->
+        <article class="project-card" data-category="fullstack vercel">
+          <div class="project-preview-mockup">
+            <div class="mockup-bar">
+              <div class="mockup-dots">
+                <span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span>
+              </div>
+              <div class="mockup-address">
+                <span class="lock-icon">🔒</span> https://drem-industrial-website.vercel.app
+              </div>
+              <span class="mockup-badge badge-live">● Live on Vercel</span>
+            </div>
+            <div class="preview-viewport">
+              <div class="preview-hud hud-drem">
+                <div class="hud-top">
+                  <div class="hud-pill"><span class="pulse-dot"></span> DREM Corporate Catalog</div>
+                  <div class="hud-stat">ISO 9001 Certified</div>
+                </div>
+                <div class="hud-drem-grid">
+                  <div class="drem-box">Industrial Hardware</div>
+                  <div class="drem-box">Heavy Machinery</div>
+                  <div class="drem-box">Fast RFQ Inquiries</div>
+                </div>
+              </div>
+              <div class="preview-overlay">
+                <button class="btn btn-preview-modal" data-preview-url="https://drem-industrial-website.vercel.app" data-preview-title="DREM Industrial Sales">
+                  ⚡ Live Interactive Preview
+                </button>
+                <a href="https://drem-industrial-website.vercel.app" target="_blank" rel="noopener" class="btn btn-ext-link">
+                  ↗ Visit Website
+                </a>
+              </div>
             </div>
           </div>
-          <h3 class="project-title">AES File Encryption Tool</h3>
-          <p class="project-role">Cryptography Project</p>
-          <p class="project-desc">
-            Java desktop application using AES-256 CBC mode with PKCS#5 padding and SHA-256 key derivation. Features chunked file processing via CipherOutputStream for large file handling.
-          </p>
-          <div class="project-tech">
-            <span>Java</span>
-            <span>JCA</span>
-            <span>AES-256</span>
-            <span>Swing</span>
-            <span>SHA-256</span>
+
+          <div class="project-content">
+            <div class="project-header">
+              <span class="project-badge">🏭 Corporate & E-Commerce</span>
+              <div class="project-links">
+                <a href="https://drem-industrial-website.vercel.app" target="_blank" rel="noopener" class="project-link" title="Live Vercel Site">
+                  <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+                <a href="https://github.com/itszedddd/drem-industrial-website" target="_blank" rel="noopener" class="project-link" title="GitHub Repository">
+                  <svg class="link-icon" viewBox="0 0 24 24"><use href="#logo-github"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">DREM Industrial Sales Corporate Website</h3>
+            <p class="project-role">Web Developer</p>
+            <p class="project-desc">
+              Corporate website for an industrial machinery and hardware distributor. Features interactive technical product showcases, client portfolio galleries, inquiry quotation forms, and smooth responsive CSS animations.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-html5"/></svg> HTML5</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-css3"/></svg> CSS3</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-javascript"/></svg> JavaScript</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-git"/></svg> Git / GitHub</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-vercel"/></svg> Vercel</span>
+            </div>
           </div>
         </article>
 
-        <!-- Project 5: DREM Industrial Website -->
-        <article class="project-card">
-          <div class="project-glow"></div>
-          <div class="project-header">
-            <span class="project-icon">🏭</span>
-            <div class="project-links">
-              <a href="https://drem-industrial-website.vercel.app" target="_blank" rel="noopener" class="project-link" title="Live Site">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-              <a href="https://github.com/itszedddd/drem-industrial-website" target="_blank" rel="noopener" class="project-link" title="GitHub">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-              </a>
+        <!-- ==========================================
+             PROJECT 5: Her Universe (Celestial Web Experience)
+             ========================================== -->
+        <article class="project-card" data-category="fullstack vercel">
+          <div class="project-preview-mockup">
+            <div class="mockup-bar">
+              <div class="mockup-dots">
+                <span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span>
+              </div>
+              <div class="mockup-address">
+                <span class="lock-icon">🔒</span> https://shienaias-22nd-birthday.vercel.app
+              </div>
+              <span class="mockup-badge badge-live">● Live on Vercel</span>
+            </div>
+            <div class="preview-viewport">
+              <div class="preview-hud hud-space">
+                <div class="hud-top">
+                  <div class="hud-pill"><span class="pulse-dot"></span> Celestial Particle Engine</div>
+                  <div class="hud-stat text-cyan">Canvas 60 FPS</div>
+                </div>
+                <div class="stars-cluster">
+                  <span class="star-node" style="top:25%; left:30%"></span>
+                  <span class="star-node" style="top:40%; left:65%"></span>
+                  <span class="star-node" style="top:60%; left:45%"></span>
+                  <span class="star-line"></span>
+                </div>
+                <div class="hud-footer-tag">Interactive Constellation Mapping</div>
+              </div>
+              <div class="preview-overlay">
+                <button class="btn btn-preview-modal" data-preview-url="https://shienaias-22nd-birthday.vercel.app" data-preview-title="Her Universe - Celestial Experience">
+                  ⚡ Live Interactive Preview
+                </button>
+                <a href="https://shienaias-22nd-birthday.vercel.app" target="_blank" rel="noopener" class="btn btn-ext-link">
+                  ↗ Visit Website
+                </a>
+              </div>
             </div>
           </div>
-          <h3 class="project-title">DREM Industrial Sales</h3>
-          <p class="project-role">Web Developer</p>
-          <p class="project-desc">
-            Corporate website for an industrial products company featuring responsive design, client showcase, product catalog, and service listings with modern animations.
-          </p>
-          <div class="project-tech">
-            <span>HTML5</span>
-            <span>CSS3</span>
-            <span>JavaScript</span>
-            <span>Responsive</span>
+
+          <div class="project-content">
+            <div class="project-header">
+              <span class="project-badge">✨ Creative / WebGL Canvas</span>
+              <div class="project-links">
+                <a href="https://shienaias-22nd-birthday.vercel.app" target="_blank" rel="noopener" class="project-link" title="Live Vercel Site">
+                  <svg class="link-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                </a>
+                <a href="https://github.com/itszedddd" target="_blank" rel="noopener" class="project-link" title="GitHub Repository">
+                  <svg class="link-icon" viewBox="0 0 24 24"><use href="#logo-github"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Her Universe — Celestial Interactive Experience</h3>
+            <p class="project-role">Creative Developer</p>
+            <p class="project-desc">
+              Custom interactive 3D celestial web app featuring dynamic HTML5 Canvas particle starfields, constellation animations, audio integration, and customized motion design built with Vite.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-vite"/></svg> Vite</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-javascript"/></svg> JavaScript</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-html5"/></svg> HTML5 Canvas</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-css3"/></svg> CSS3</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-vercel"/></svg> Vercel</span>
+            </div>
           </div>
         </article>
 
-        <!-- Project 6: NourishAI -->
-        <article class="project-card">
-          <div class="project-glow"></div>
-          <div class="project-header">
-            <span class="project-icon">🍎</span>
-            <div class="project-links">
-              <a href="https://github.com/itszedddd" target="_blank" rel="noopener" class="project-link" title="GitHub">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-              </a>
+        <!-- ==========================================
+             PROJECT 6: NourishAI Mobile
+             ========================================== -->
+        <article class="project-card" data-category="mobile-desktop aiml">
+          <div class="project-preview-mockup">
+            <div class="mockup-bar">
+              <div class="mockup-dots">
+                <span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span>
+              </div>
+              <div class="mockup-address">
+                <span class="lock-icon">📱</span> nourishai://mobile.app
+              </div>
+              <span class="mockup-badge badge-active">● Active Mobile Project</span>
+            </div>
+            <div class="preview-viewport">
+              <div class="preview-hud hud-mobile">
+                <div class="hud-top">
+                  <div class="hud-pill"><span class="pulse-dot"></span> React Native / Expo</div>
+                  <div class="hud-stat">Daily Goal: <strong>2,200 kcal</strong></div>
+                </div>
+                <div class="macro-donut-mock">
+                  <div class="macro-stat">Protein: 140g • Carbs: 210g • Fats: 55g</div>
+                  <div class="hud-meter"><div class="meter-fill cyan" style="width: 78%"></div></div>
+                </div>
+              </div>
             </div>
           </div>
-          <h3 class="project-title">NourishAI</h3>
-          <p class="project-role">Mobile App Developer</p>
-          <p class="project-desc">
-            Cross-platform mobile nutrition app built with React Native and Expo Router, featuring modern TypeScript architecture and scalable component design.
-          </p>
-          <div class="project-tech">
-            <span>React Native</span>
-            <span>Expo</span>
-            <span>TypeScript</span>
+
+          <div class="project-content">
+            <div class="project-header">
+              <span class="project-badge">🍎 Mobile / AI Nutrition</span>
+              <div class="project-links">
+                <a href="https://github.com/itszedddd" target="_blank" rel="noopener" class="project-link" title="GitHub Repository">
+                  <svg class="link-icon" viewBox="0 0 24 24"><use href="#logo-github"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">NourishAI — Smart Nutrition Mobile App</h3>
+            <p class="project-role">Mobile App Developer</p>
+            <p class="project-desc">
+              Cross-platform mobile nutrition application engineered with React Native and Expo Router. Implements macro-nutrient tracking, dynamic dietary target calculations, and clean component-driven state architecture.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-reactnative"/></svg> React Native</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-expo"/></svg> Expo Router</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-typescript"/></svg> TypeScript</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-javascript"/></svg> JavaScript</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==========================================
+             PROJECT 7: AES-256 Enterprise File Encryption Tool
+             ========================================== -->
+        <article class="project-card" data-category="mobile-desktop security">
+          <div class="project-preview-mockup">
+            <div class="mockup-bar">
+              <div class="mockup-dots">
+                <span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span>
+              </div>
+              <div class="mockup-address">
+                <span class="lock-icon">🔒</span> AESTool.java [AES-256 CBC Mode]
+              </div>
+              <span class="mockup-badge badge-active">● Desktop System</span>
+            </div>
+            <div class="preview-viewport">
+              <div class="preview-hud hud-terminal">
+                <div class="hud-top">
+                  <div class="hud-pill"><span class="pulse-dot"></span> JCA Engine Active</div>
+                  <div class="hud-stat text-cyan">CipherOutputStream 100%</div>
+                </div>
+                <div class="terminal-preview-lines">
+                  <code>[AES-256] Key Derived via SHA-256 (32 bytes)</code>
+                  <code>[IV-GEN] SecureRandom CBC Vector Attached</code>
+                  <code>[STREAM] Chunked Buffer: 0 OOM Errors</code>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-content">
+            <div class="project-header">
+              <span class="project-badge">🔐 Cryptography / Desktop</span>
+              <div class="project-links">
+                <a href="https://github.com/itszedddd" target="_blank" rel="noopener" class="project-link" title="GitHub Repository">
+                  <svg class="link-icon" viewBox="0 0 24 24"><use href="#logo-github"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">AES-256 Enterprise File Encryption Tool</h3>
+            <p class="project-role">Security & Desktop Software Engineer</p>
+            <p class="project-desc">
+              Java desktop application implementing AES-256 symmetric encryption in CBC mode with PKCS#5 padding. Uses SHA-256 key derivation and streaming chunk processing via <code>CipherOutputStream</code> to encrypt multi-gigabyte files with maximum memory efficiency.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-java"/></svg> Java</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-crypto"/></svg> AES-256</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-crypto"/></svg> JCA Security</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-swing"/></svg> Java Swing</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==========================================
+             PROJECT 8: CS314 Cryptography Suite & Cipher Lab
+             ========================================== -->
+        <article class="project-card" data-category="security">
+          <div class="project-preview-mockup">
+            <div class="mockup-bar">
+              <div class="mockup-dots">
+                <span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span>
+              </div>
+              <div class="mockup-address">
+                <span class="lock-icon">🔒</span> crypto_app.py / CryptoAppGUI.java
+              </div>
+              <span class="mockup-badge badge-active">● Algorithm Suite</span>
+            </div>
+            <div class="preview-viewport">
+              <div class="preview-hud hud-terminal">
+                <div class="hud-top">
+                  <div class="hud-pill"><span class="pulse-dot"></span> Vigenère & Modern Ciphers</div>
+                  <div class="hud-stat text-cyan">Mod 26 Arithmetic</div>
+                </div>
+                <div class="terminal-preview-lines">
+                  <code>C = (P + K) mod 26 (Polyalphabetic Matrix)</code>
+                  <code>Non-alphabetic character preservation: OK</code>
+                  <code>Frequency Analysis & Key Index Analyzer: Ready</code>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-content">
+            <div class="project-header">
+              <span class="project-badge">🛡️ Security / Algorithms</span>
+              <div class="project-links">
+                <a href="https://github.com/itszedddd" target="_blank" rel="noopener" class="project-link" title="GitHub Repository">
+                  <svg class="link-icon" viewBox="0 0 24 24"><use href="#logo-github"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">CS314 Cryptography Suite & Cipher Lab</h3>
+            <p class="project-role">Algorithm & Cryptography Developer</p>
+            <p class="project-desc">
+              Comprehensive cryptographic suite implementing classical polyalphabetic substitution (Vigenère cipher) alongside modern encryption ciphers. Features keystream generators, ASCII/Hex transformers, and frequency analyzers with dual Java Swing and Python interfaces.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-python"/></svg> Python</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-java"/></svg> Java</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-swing"/></svg> Swing GUI</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-crypto"/></svg> Cryptography</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==========================================
+             PROJECT 9: MoodPulse - Full-Stack Mood Tracker
+             ========================================== -->
+        <article class="project-card" data-category="fullstack">
+          <div class="project-preview-mockup">
+            <div class="mockup-bar">
+              <div class="mockup-dots">
+                <span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span>
+              </div>
+              <div class="mockup-address">
+                <span class="lock-icon">🔒</span> mood-tracker.local:4000
+              </div>
+              <span class="mockup-badge badge-active">● Express Backend</span>
+            </div>
+            <div class="preview-viewport">
+              <div class="preview-hud hud-mood">
+                <div class="hud-top">
+                  <div class="hud-pill"><span class="pulse-dot"></span> Express REST API</div>
+                  <div class="hud-stat text-cyan">Sentiment: <strong>Positive (+0.84)</strong></div>
+                </div>
+                <div class="mood-emojis">
+                  <span>😊 Joy</span> <span>⚡ Energetic</span> <span>🧘 Focused</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-content">
+            <div class="project-header">
+              <span class="project-badge">🧠 Web App / Express</span>
+              <div class="project-links">
+                <a href="https://github.com/itszedddd" target="_blank" rel="noopener" class="project-link" title="GitHub Repository">
+                  <svg class="link-icon" viewBox="0 0 24 24"><use href="#logo-github"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">MoodPulse — Full-Stack Mood Tracker</h3>
+            <p class="project-role">Backend & Web Developer</p>
+            <p class="project-desc">
+              Node.js and Express full-stack web application for logging emotional states, sentiment trends, and personal reflection. Includes protected REST endpoints and basic authentication for private logging.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-nodejs"/></svg> Node.js</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-express"/></svg> Express</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-javascript"/></svg> JavaScript</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-css3"/></svg> CSS3</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ==========================================
+             PROJECT 10: STS Educational Portal
+             ========================================== -->
+        <article class="project-card" data-category="fullstack">
+          <div class="project-preview-mockup">
+            <div class="mockup-bar">
+              <div class="mockup-dots">
+                <span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span>
+              </div>
+              <div class="mockup-address">
+                <span class="lock-icon">🔒</span> sts-education-portal.local
+              </div>
+              <span class="mockup-badge badge-active">● Educational Platform</span>
+            </div>
+            <div class="preview-viewport">
+              <div class="preview-hud hud-sts">
+                <div class="hud-top">
+                  <div class="hud-pill"><span class="pulse-dot"></span> Knowledge Hub</div>
+                  <div class="hud-stat">Lessons: <strong>Interactive</strong></div>
+                </div>
+                <div class="sts-card-preview">
+                  <span class="sts-tag">Science, Technology & Society</span>
+                  <div class="sts-bar">Live Multi-Topic Search Filter</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-content">
+            <div class="project-header">
+              <span class="project-badge">📚 Interactive Learning</span>
+              <div class="project-links">
+                <a href="https://github.com/itszedddd" target="_blank" rel="noopener" class="project-link" title="GitHub Repository">
+                  <svg class="link-icon" viewBox="0 0 24 24"><use href="#logo-github"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">STS Interactive Educational Portal</h3>
+            <p class="project-role">Frontend Developer</p>
+            <p class="project-desc">
+              Coursework portal for Science, Technology, and Society with real-time client-side search filtering, dynamic JSON lesson data indexing, and responsive Tailwind cards.
+            </p>
+            <div class="project-tech">
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-html5"/></svg> HTML5</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-tailwindcss"/></svg> Tailwind CSS</span>
+              <span class="tech-badge"><svg class="tech-icon"><use href="#logo-javascript"/></svg> JavaScript</span>
+            </div>
           </div>
         </article>
 
       </div>
     </div>
   </section>
+
+  <!-- ===== IN-PORTFOLIO INTERACTIVE LIVE PREVIEW MODAL ===== -->
+  <div class="preview-modal" id="previewModal" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-container">
+      <div class="modal-browser-header">
+        <div class="browser-controls">
+          <button class="control-dot dot-red" id="modalCloseDot" title="Close Preview"></button>
+          <span class="control-dot dot-yellow"></span>
+          <span class="control-dot dot-green"></span>
+        </div>
+        <div class="device-toggles">
+          <button class="device-btn active" data-device="desktop" title="Desktop View">🖥️ Desktop</button>
+          <button class="device-btn" data-device="tablet" title="Tablet View">📱 Tablet (768px)</button>
+          <button class="device-btn" data-device="mobile" title="Mobile View">📱 Mobile (390px)</button>
+        </div>
+        <div class="modal-url-bar">
+          <span class="lock-icon">🔒</span>
+          <span id="modalUrlText">https://www.ccaedusys.site</span>
+        </div>
+        <div class="modal-actions">
+          <button class="modal-action-btn" id="modalReloadBtn" title="Reload Frame">🔄</button>
+          <a id="modalExternalLink" href="#" target="_blank" rel="noopener" class="modal-btn-ext" title="Open in new window">
+            ↗ Open in New Tab
+          </a>
+          <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close Preview">&times;</button>
+        </div>
+      </div>
+      <div class="modal-frame-wrapper" id="modalFrameWrapper">
+        <div class="modal-loader" id="modalLoader">
+          <div class="loader-spinner"></div>
+          <p>Connecting to live deployment...</p>
+        </div>
+        <iframe id="modalIframe" src="" frameborder="0" allow="fullscreen" sandbox="allow-scripts allow-same-origin allow-forms allow-popups"></iframe>
+      </div>
+    </div>
+  </div>
 
   <!-- ===== EXPERIENCE ===== -->
   <section class="section section-alt" id="experience">
     <div class="container">
       <h2 class="section-title" data-reveal>
         <span class="section-tag">&lt;experience&gt;</span>
-        Journey
+        Journey & Milestones
         <span class="section-tag">&lt;/experience&gt;</span>
       </h2>
       <div class="timeline" data-reveal>
@@ -408,10 +1120,10 @@
           <div class="timeline-marker"></div>
           <div class="timeline-content">
             <div class="timeline-date">Dec 2025 — Present</div>
-            <h3 class="timeline-title">Thesis Project — CCA Academic Monitoring System</h3>
+            <h3 class="timeline-title">Thesis Lead — CCA Academic Monitoring & OCR System</h3>
             <p class="timeline-company">Immaculada Concepcion College</p>
             <p class="timeline-desc">
-              Engineering an AI-assisted Student Information System using React 19 + FastAPI with OCR enrollment automation and ML-powered Early Warning System.
+              Architecting full-stack AI platform combining React 19 SPA, FastAPI, Tesseract OCR for automated student admissions, and Scikit-learn predictive models. Deployed on custom domain <code>ccaedusys.site</code>.
             </p>
           </div>
         </div>
@@ -423,7 +1135,7 @@
             <h3 class="timeline-title">DOST NCR Game Development Bootcamp</h3>
             <p class="timeline-company">Department of Science & Technology</p>
             <p class="timeline-desc">
-              Participated and graduated from the government-sponsored Game Development Bootcamp, expanding skills in interactive media development.
+              Graduated from government-sponsored immersive bootcamp, mastering interactive media architecture, state engines, and performance optimization.
             </p>
           </div>
         </div>
@@ -432,10 +1144,10 @@
           <div class="timeline-marker"></div>
           <div class="timeline-content">
             <div class="timeline-date">2025</div>
-            <h3 class="timeline-title">1st Runner Up — Automata Design</h3>
+            <h3 class="timeline-title">1st Runner Up — Automata Design Competition</h3>
             <p class="timeline-company">ICC CS Symposium</p>
             <p class="timeline-desc">
-              Earned recognition at the college-wide Computer Science Symposium for innovative automata design — a competition on state machines and language theory.
+              Earned collegiate award in state machine theory, formal language automata, and algorithmic design.
             </p>
           </div>
         </div>
@@ -444,10 +1156,10 @@
           <div class="timeline-marker"></div>
           <div class="timeline-content">
             <div class="timeline-date">2024 — 2025</div>
-            <h3 class="timeline-title">Freelance Video Editor</h3>
-            <p class="timeline-company">International Client</p>
+            <h3 class="timeline-title">Freelance Video Editor & Technical Media Specialist</h3>
+            <p class="timeline-company">International Clients</p>
             <p class="timeline-desc">
-              Delivered high-quality video editing services, managing project timelines and translating creative requirements into engaging visual content.
+              Managed international client workflows, translating creative storyboards into high-engagement visual content with strict turnaround times.
             </p>
           </div>
         </div>
@@ -459,7 +1171,7 @@
             <h3 class="timeline-title">BS Computer Science</h3>
             <p class="timeline-company">Immaculada Concepcion College, Caloocan</p>
             <p class="timeline-desc">
-              Dean's Lister with a GPA of 1.4. Focusing on systems architecture, machine learning, and full-stack development.
+              Dean's Lister with a 1.4 GPA. Core focus on system design, cryptography, machine learning, and full-stack software development.
             </p>
           </div>
         </div>
@@ -478,8 +1190,8 @@
       </h2>
       <div class="contact-content" data-reveal>
         <p class="contact-intro">
-          I'm always open to new opportunities, collaborations, and conversations.
-          Whether you have a project in mind or just want to say hi — my inbox is always open.
+          I'm always open to discussing new opportunities, collaborations, or engineering challenges.
+          Feel free to reach out via email, phone, or GitHub!
         </p>
         <div class="contact-links">
           <a href="mailto:tobiascedrickjay@gmail.com" class="contact-card">
@@ -499,7 +1211,7 @@
           </a>
         </div>
         <a href="mailto:tobiascedrickjay@gmail.com" class="btn btn-primary btn-lg">
-          <span class="btn-icon">🚀</span> Say Hello
+          <span class="btn-icon">🚀</span> Start a Conversation
         </a>
       </div>
     </div>
@@ -512,7 +1224,7 @@
         <p class="footer-logo">
           <span class="logo-bracket">&lt;</span>cedrick<span class="logo-dot">.</span>dev<span class="logo-bracket"> /&gt;</span>
         </p>
-        <p class="footer-text">Designed & built by Cedrick Jay Tobias</p>
+        <p class="footer-text">Engineered & Designed by Cedrick Jay Tobias</p>
         <p class="footer-copy">&copy; 2026 — All rights reserved.</p>
       </div>
     </div>
