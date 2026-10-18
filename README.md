@@ -2,7 +2,7 @@
 
 Personal developer portfolio featuring a sleek cyber/hacker dark theme, matrix rain background, terminal hero section, interactive project showcase, and dynamic skill grids.
 
-🔗 **Live Site:** [https://cedrick-portfolio.vercel.app](https://cedrick-portfolio.vercel.app) *(or your deployed Vercel URL)*
+🔗 **Live Site:** [https://portfolio-eight-fawn-52.vercel.app](https://portfolio-eight-fawn-52.vercel.app)
 
 ## 🚀 Built With
 - **HTML5 & CSS3** — Vanilla CSS design tokens, glassmorphism, responsive grid & flexbox layouts
