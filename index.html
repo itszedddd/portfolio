@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cedrick Jay Tobias — Software Engineer</title>
+  <meta name="description" content="Portfolio of Cedrick Jay A. Tobias — Full-Stack Software Engineer, building intelligent systems with React, FastAPI, and Machine Learning.">
+  <meta property="og:title" content="Cedrick Jay Tobias — Software Engineer">
+  <meta property="og:description" content="Full-Stack Developer crafting modern, intelligent web applications.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230a0e17'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-weight='bold' font-size='16' fill='%2300ffff'>&lt;/&gt;</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== CURSOR GLOW ===== -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ===== MATRIX RAIN CANVAS ===== -->
+  <canvas id="matrixCanvas"></canvas>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>cedrick<span class="logo-dot">.</span>dev<span class="logo-bracket"> /&gt;</span>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#contact" class="nav-link nav-cta">Contact</a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-terminal">
+        <div class="terminal-header">
+          <span class="terminal-dot red"></span>
+          <span class="terminal-dot yellow"></span>
+          <span class="terminal-dot green"></span>
+          <span class="terminal-title">cedrick@portfolio ~ </span>
+        </div>
+        <div class="terminal-body">
+          <p class="terminal-line"><span class="prompt">$</span> <span class="cmd">whoami</span></p>
+          <p class="terminal-output hero-greeting" id="heroGreeting"></p>
+          <p class="terminal-line delay-1"><span class="prompt">$</span> <span class="cmd">cat role.txt</span></p>
+          <p class="terminal-output delay-2">
+            <span class="typing-text" id="typingRole"></span><span class="cursor-blink">▊</span>
+          </p>
+          <p class="terminal-line delay-3"><span class="prompt">$</span> <span class="cmd">echo $STATUS</span></p>
+          <p class="terminal-output delay-4">🟢 Open to opportunities — Building the future, one commit at a time.</p>
+        </div>
+      </div>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">
+          <span class="btn-icon">⚡</span> View My Work
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <span class="btn-icon">📨</span> Get In Touch
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number" data-count="6">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-count="10">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Technologies</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" data-count="3">0</span>
+          <span class="stat-label">Languages</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title" data-reveal>
+        <span class="section-tag">&lt;about&gt;</span>
+        Who I Am
+        <span class="section-tag">&lt;/about&gt;</span>
+      </h2>
+      <div class="about-grid" data-reveal>
+        <div class="about-text">
+          <p class="about-intro">
+            Hey! I'm <strong>Cedrick Jay Tobias</strong> — a <span class="highlight">Full-Stack Software Engineer</span> based in Metro Manila, Philippines. I'm currently pursuing a BS in Computer Science at Immaculada Concepcion College.
+          </p>
+          <p>
+            I specialize in building modern, full-stack applications with <span class="highlight">React</span>, <span class="highlight">Next.js</span>, and <span class="highlight">FastAPI</span>, with a focus on integrating <span class="highlight">Machine Learning</span> and <span class="highlight">Computer Vision</span> into practical systems. I've built everything from AI-assisted school management platforms to secure cryptography tools.
+          </p>
+          <p>
+            When I'm not coding, I'm exploring new technologies, contributing to open-source, or editing videos for international clients. I'm a Dean's Lister (GPA 1.4) and a DOST Game Development Bootcamp graduate.
+          </p>
+          <div class="about-details">
+            <div class="detail-item">
+              <span class="detail-icon">📍</span>
+              <span>Metro Manila, Philippines</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-icon">🎓</span>
+              <span>BS Computer Science, ICC</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-icon">🏆</span>
+              <span>Dean's Lister — GPA 1.4</span>
+            </div>
+            <div class="detail-item">
+              <span class="detail-icon">🌐</span>
+              <span>English, Tagalog, Cebuano</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-card">
+          <div class="card-glow"></div>
+          <div class="code-block">
+            <pre><code><span class="code-keyword">const</span> <span class="code-var">cedrick</span> = {
+  <span class="code-key">role</span>: <span class="code-string">"Full-Stack Developer"</span>,
+  <span class="code-key">education</span>: <span class="code-string">"BS Computer Science"</span>,
+  <span class="code-key">school</span>: <span class="code-string">"ICC Caloocan"</span>,
+  <span class="code-key">passions</span>: [
+    <span class="code-string">"Web Development"</span>,
+    <span class="code-string">"Machine Learning"</span>,
+    <span class="code-string">"Cryptography"</span>,
+    <span class="code-string">"System Design"</span>
+  ],
+  <span class="code-key">status</span>: <span class="code-string">"Open to work"</span>,
+  <span class="code-method">buildSomethingAwesome</span>() {
+    <span class="code-keyword">return</span> <span class="code-string">"Let's go! 🚀"</span>;
+  }
+};</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <h2 class="section-title" data-reveal>
+        <span class="section-tag">&lt;skills&gt;</span>
+        Tech Stack
+        <span class="section-tag">&lt;/skills&gt;</span>
+      </h2>
+      <div class="skills-grid" data-reveal>
+        <div class="skill-category">
+          <h3 class="skill-category-title">
+            <span class="cat-icon">💻</span> Languages
+          </h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">C++</span>
+            <span class="skill-tag">PHP</span>
+            <span class="skill-tag">SQL</span>
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">CSS3</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3 class="skill-category-title">
+            <span class="cat-icon">⚛️</span> Frameworks
+          </h3>
+          <div class="skill-tags">
+            <span class="skill-tag featured">React.js</span>
+            <span class="skill-tag featured">Next.js</span>
+            <span class="skill-tag featured">FastAPI</span>
+            <span class="skill-tag">React Native</span>
+            <span class="skill-tag">Tailwind CSS</span>
+            <span class="skill-tag">Shadcn UI</span>
+            <span class="skill-tag">Prisma ORM</span>
+            <span class="skill-tag">NextAuth.js</span>
+            <span class="skill-tag">Laravel</span>
+            <span class="skill-tag">Bootstrap</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3 class="skill-category-title">
+            <span class="cat-icon">🗄️</span> Databases
+          </h3>
+          <div class="skill-tags">
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">SQLite</span>
+            <span class="skill-tag">MySQL</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3 class="skill-category-title">
+            <span class="cat-icon">🛠️</span> Tools & Core
+          </h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Git / GitHub</span>
+            <span class="skill-tag">Vite</span>
+            <span class="skill-tag">Tesseract OCR</span>
+            <span class="skill-tag">Scikit-learn</span>
+            <span class="skill-tag">REST APIs</span>
+            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">OOP</span>
+            <span class="skill-tag">ML Integration</span>
+            <span class="skill-tag">Cryptography</span>
+            <span class="skill-tag">SSR</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section-title" data-reveal>
+        <span class="section-tag">&lt;projects&gt;</span>
+        Featured Work
+        <span class="section-tag">&lt;/projects&gt;</span>
+      </h2>
+      <div class="projects-grid" data-reveal>
+
+        <!-- Project 1: CCA Academic Monitoring System -->
+        <article class="project-card featured-project">
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <span class="project-icon">🎓</span>
+            <div class="project-links">
+              <a href="https://github.com/itszedddd" target="_blank" rel="noopener" class="project-link" title="GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">CCA Academic Monitoring System</h3>
+          <p class="project-role">Thesis Project — Full Stack Developer</p>
+          <p class="project-desc">
+            AI-assisted Student Information and Academic Monitoring System with Tesseract OCR for automated enrollment workflows and Scikit-learn ML models for Early Warning System (EWS) to predict tuition payment risks.
+          </p>
+          <div class="project-tech">
+            <span>React 19</span>
+            <span>FastAPI</span>
+            <span>Vite</span>
+            <span>Tesseract OCR</span>
+            <span>Scikit-learn</span>
+            <span>SQLite</span>
+          </div>
+        </article>
+
+        <!-- Project 2: CCA CashFlow System -->
+        <article class="project-card">
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <span class="project-icon">💰</span>
+            <div class="project-links">
+              <a href="https://cca-cashflow-system.vercel.app" target="_blank" rel="noopener" class="project-link" title="Live Site">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+              <a href="https://github.com/itszedddd/CCA-CashFLow-System" target="_blank" rel="noopener" class="project-link" title="GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">CCA CashFlow System</h3>
+          <p class="project-role">Full Stack Developer</p>
+          <p class="project-desc">
+            School cashflow management system with real-time dashboards, budget tracking, approval workflows, role-based access, and full audit trails. React + FastAPI with JWT auth.
+          </p>
+          <div class="project-tech">
+            <span>React 19</span>
+            <span>FastAPI</span>
+            <span>Recharts</span>
+            <span>JWT</span>
+            <span>SQLAlchemy</span>
+          </div>
+        </article>
+
+        <!-- Project 3: HOP Veterinary System -->
+        <article class="project-card">
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <span class="project-icon">🐾</span>
+            <div class="project-links">
+              <a href="https://github.com/itszedddd" target="_blank" rel="noopener" class="project-link" title="GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">House of Puppies (HOP)</h3>
+          <p class="project-role">Full Stack Developer</p>
+          <p class="project-desc">
+            Veterinary clinic management system with pet health records, e-prescriptions, inventory management, AI-integrated SMS reminders, and role-based access control.
+          </p>
+          <div class="project-tech">
+            <span>Next.js 15</span>
+            <span>Prisma</span>
+            <span>Shadcn UI</span>
+            <span>NextAuth.js</span>
+            <span>SQLite</span>
+          </div>
+        </article>
+
+        <!-- Project 4: AES Encryption Tool -->
+        <article class="project-card">
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <span class="project-icon">🔐</span>
+            <div class="project-links">
+              <a href="https://github.com/itszedddd" target="_blank" rel="noopener" class="project-link" title="GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">AES File Encryption Tool</h3>
+          <p class="project-role">Cryptography Project</p>
+          <p class="project-desc">
+            Java desktop application using AES-256 CBC mode with PKCS#5 padding and SHA-256 key derivation. Features chunked file processing via CipherOutputStream for large file handling.
+          </p>
+          <div class="project-tech">
+            <span>Java</span>
+            <span>JCA</span>
+            <span>AES-256</span>
+            <span>Swing</span>
+            <span>SHA-256</span>
+          </div>
+        </article>
+
+        <!-- Project 5: DREM Industrial Website -->
+        <article class="project-card">
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <span class="project-icon">🏭</span>
+            <div class="project-links">
+              <a href="https://drem-industrial-website.vercel.app" target="_blank" rel="noopener" class="project-link" title="Live Site">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+              <a href="https://github.com/itszedddd/drem-industrial-website" target="_blank" rel="noopener" class="project-link" title="GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">DREM Industrial Sales</h3>
+          <p class="project-role">Web Developer</p>
+          <p class="project-desc">
+            Corporate website for an industrial products company featuring responsive design, client showcase, product catalog, and service listings with modern animations.
+          </p>
+          <div class="project-tech">
+            <span>HTML5</span>
+            <span>CSS3</span>
+            <span>JavaScript</span>
+            <span>Responsive</span>
+          </div>
+        </article>
+
+        <!-- Project 6: NourishAI -->
+        <article class="project-card">
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <span class="project-icon">🍎</span>
+            <div class="project-links">
+              <a href="https://github.com/itszedddd" target="_blank" rel="noopener" class="project-link" title="GitHub">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-title">NourishAI</h3>
+          <p class="project-role">Mobile App Developer</p>
+          <p class="project-desc">
+            Cross-platform mobile nutrition app built with React Native and Expo Router, featuring modern TypeScript architecture and scalable component design.
+          </p>
+          <div class="project-tech">
+            <span>React Native</span>
+            <span>Expo</span>
+            <span>TypeScript</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section class="section section-alt" id="experience">
+    <div class="container">
+      <h2 class="section-title" data-reveal>
+        <span class="section-tag">&lt;experience&gt;</span>
+        Journey
+        <span class="section-tag">&lt;/experience&gt;</span>
+      </h2>
+      <div class="timeline" data-reveal>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">Dec 2025 — Present</div>
+            <h3 class="timeline-title">Thesis Project — CCA Academic Monitoring System</h3>
+            <p class="timeline-company">Immaculada Concepcion College</p>
+            <p class="timeline-desc">
+              Engineering an AI-assisted Student Information System using React 19 + FastAPI with OCR enrollment automation and ML-powered Early Warning System.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2025</div>
+            <h3 class="timeline-title">DOST NCR Game Development Bootcamp</h3>
+            <p class="timeline-company">Department of Science & Technology</p>
+            <p class="timeline-desc">
+              Participated and graduated from the government-sponsored Game Development Bootcamp, expanding skills in interactive media development.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2025</div>
+            <h3 class="timeline-title">1st Runner Up — Automata Design</h3>
+            <p class="timeline-company">ICC CS Symposium</p>
+            <p class="timeline-desc">
+              Earned recognition at the college-wide Computer Science Symposium for innovative automata design — a competition on state machines and language theory.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">2024 — 2025</div>
+            <h3 class="timeline-title">Freelance Video Editor</h3>
+            <p class="timeline-company">International Client</p>
+            <p class="timeline-desc">
+              Delivered high-quality video editing services, managing project timelines and translating creative requirements into engaging visual content.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-date">Aug 2024 — Present</div>
+            <h3 class="timeline-title">BS Computer Science</h3>
+            <p class="timeline-company">Immaculada Concepcion College, Caloocan</p>
+            <p class="timeline-desc">
+              Dean's Lister with a GPA of 1.4. Focusing on systems architecture, machine learning, and full-stack development.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="section-title" data-reveal>
+        <span class="section-tag">&lt;contact&gt;</span>
+        Let's Connect
+        <span class="section-tag">&lt;/contact&gt;</span>
+      </h2>
+      <div class="contact-content" data-reveal>
+        <p class="contact-intro">
+          I'm always open to new opportunities, collaborations, and conversations.
+          Whether you have a project in mind or just want to say hi — my inbox is always open.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:tobiascedrickjay@gmail.com" class="contact-card">
+            <span class="contact-icon">📧</span>
+            <span class="contact-label">Email</span>
+            <span class="contact-value">tobiascedrickjay@gmail.com</span>
+          </a>
+          <a href="tel:+639157322074" class="contact-card">
+            <span class="contact-icon">📱</span>
+            <span class="contact-label">Phone</span>
+            <span class="contact-value">+63 915 732 2074</span>
+          </a>
+          <a href="https://github.com/itszedddd" target="_blank" rel="noopener" class="contact-card">
+            <span class="contact-icon">🐙</span>
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">@itszedddd</span>
+          </a>
+        </div>
+        <a href="mailto:tobiascedrickjay@gmail.com" class="btn btn-primary btn-lg">
+          <span class="btn-icon">🚀</span> Say Hello
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-logo">
+          <span class="logo-bracket">&lt;</span>cedrick<span class="logo-dot">.</span>dev<span class="logo-bracket"> /&gt;</span>
+        </p>
+        <p class="footer-text">Designed & built by Cedrick Jay Tobias</p>
+        <p class="footer-copy">&copy; 2026 — All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
